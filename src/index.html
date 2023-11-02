@@ -1,0 +1,38 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "MahdiPakravan"})
+
+        <!-- Css -->
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+
+        @@include("partials/navbar/nav-left-white.html")
+        @@include("partials/hero.html")
+        @@include("partials/hero-introduce.html")
+        @@include("partials/steps.html")
+        @@include("partials/reserve.html")
+        @@include("partials/experience.html")
+        @@include("partials/portfo.html")
+        @@include("partials/comments.html")
+        @@include("partials/blog.html")
+        @@include("partials/contact-form.html")
+
+        @@include("partials/footer/footer.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-amber-500 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        @@include("partials/switcher.html")
+
+        <!-- JAVASCRIPTS -->
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        @@include("partials/script-file.html")
+        <script>
+            window.renderGrid("blog_container",window.booklets.slice(0,3))
+        </script>
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

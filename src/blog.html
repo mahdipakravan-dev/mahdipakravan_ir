@@ -1,0 +1,55 @@
+@@include("partials/main.html")
+<head>
+    @@include("partials/title-meta.html", {"title": "MahdiPakravan"})
+
+    <!-- Css -->
+    @@include("partials/head-css.html")
+</head>
+
+@@include("partials/body.html")
+
+    @@include("partials/navbar/nav-left-white.html")
+
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="service">
+        <div class="container">
+            <div class="grid grid-cols-1 pb-2 text-center">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">جزوات دانشگاهی</h3>
+            </div>
+
+            <div class="w-full h-[300px] border border-slate-300 rounded mt-2 flex justify-center items-center hidden" id="booklets_container_empty">
+                در حال حاضر مقاله ای گذاشته نشده است , به زودی...
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mt-8 gap-[30px]" id="booklets_container">
+            </div>
+
+            <div class="grid grid-cols-1 pb-6 text-center mt-8">
+                <h3 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">مقاله ها</h3>
+
+                <p class="text-slate-400 max-w-xl mx-auto text-[15px]">
+                    مقاله ها و جزوات من در حوزه های مهندسی نرم افزار , وب و هوش مصنوعی
+                </p>
+            </div>
+
+            <div class="w-full h-[400px] border border-slate-300 rounded mt-8 flex justify-center items-center hidden"  id="post_container_empty">
+                در حال حاضر مقاله ای گذاشته نشده است , به زودی...
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mt-8 gap-[30px]" id="post_container">
+            </div>
+        </div>
+    </section>
+
+@@include("partials/footer/footer.html")
+
+<a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-amber-500 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+
+@@include("partials/switcher.html")
+
+<script src="assets/libs/feather-icons/feather.min.js"></script>
+@@include("partials/script-file.html")
+
+<script>
+    window.renderGrid("post_container" , window.posts);
+    window.renderGrid("booklets_container" , window.booklets);
+</script>
+</body>
+</html>

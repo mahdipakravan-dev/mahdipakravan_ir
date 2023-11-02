@@ -1,0 +1,177 @@
+
+/*********************************/
+/*             Helper            */
+/*===============================*/
+.container,
+.contacinr-fluid {
+    @apply relative;
+}
+
+/*********************************/
+/*         Tobii Lightbox        */
+/*===============================*/
+/* Tobii Lighbox */
+.tobii>button.tobii__close svg,
+.tobii>button.tobii__prev svg, 
+.tobii>button.tobii__next svg {
+    @apply h-9 w-auto;
+}
+
+.tobii__counter {
+    @apply text-base;
+}
+
+.tobii-zoom {
+    @apply block;
+}
+
+.tobii-zoom__icon {
+    @apply hidden;
+}
+
+#grid {
+    @apply p-0;
+}
+
+/*****************/
+/*    Shapes     */
+/*****************/
+/* Shapes */
+.shape {
+    @apply absolute right-0 -bottom-px left-0;
+    &>svg {
+        @apply w-full h-auto;
+        transform: scale(2);
+        transform-origin: theme('transformOrigin.top') theme('transformOrigin.center');
+    }
+}
+
+/*****************/
+/*  back-to-top  */
+/*****************/
+.back-to-top {
+    @apply hidden;
+}
+/*****************/
+/*    Switcher   */
+/*****************/
+.label {
+    .ball {
+        transition: transform 0.2s linear;
+        @apply translate-x-0;
+    }
+}
+
+.checkbox:checked + .label .ball {
+	@apply translate-x-6;
+}
+
+
+/*****************/
+/*   Preloader   */
+/*****************/
+#preloader {
+    background-image: linear-gradient(45deg, #ffffff, #ffffff);
+    z-index: 99999;
+    @apply fixed inset-0;
+    #status {
+        @apply absolute left-0 right-0 top-1/2 -translate-y-1/2;
+        .spinner {
+            @apply w-10 h-10 relative my-[100px] mx-auto;
+            .double-bounce1, .double-bounce2 {
+                @apply w-full h-full rounded-full bg-amber-500/60 absolute top-0 left-0;
+                animation: sk-bounce 2.0s infinite ease-in-out;
+            }
+            .double-bounce2 {
+                animation-delay: -1.0s;
+            }
+        }
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+    }
+}
+
+/*********************************/
+/*             Testi            */
+/*===============================*/
+.customer-testi {
+    @apply cursor-e-resize;
+    .content {
+        &:before {
+            transform-origin: 0 0;
+        }
+
+        @apply before:content-[''] before:absolute before:left-1/2 before:-bottom-[4px] before:box-border before:border-8 before:rotate-[45deg] before:border-t-transparent before:border-e-white dark:before:border-e-slate-900 before:border-b-white dark:before:border-b-slate-900 before:border-s-transparent before:shadow-testi dark:before:shadow-gray-700;
+    }
+}
+
+/* RTL */
+html[dir="rtl"]{
+    .tns-inner, .tns-nav, .slider, .slider2, .swiper-slider-hero {
+        direction: ltr !important;
+		text-align:right !important;
+    }
+	p {
+		direction:rtl !important;
+	}
+    .tns-visually-hidden {
+        left: 0 !important;
+        visibility: hidden;
+    }
+}
+
+/*****************/
+/*  video iframe */
+/*****************/
+@media (max-width: 640px) {
+    [data-type] iframe, [data-type] video {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    [data-type] iframe, [data-type] video {
+        width: 360px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 375px) {
+    [data-type] iframe, [data-type] video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* personal Hero */
+.personal-wrapper {
+    @apply before:content-[''] before:absolute before:bottom-40 ltr:before:left-[45rem] rtl:before:right-[45rem] before:w-[90rem] before:h-[35rem] ltr:before:rotate-[115deg] rtl:before:rotate-[65deg] before:bg-amber-500;
+
+    @apply after:content-[''] after:absolute after:bottom-96 ltr:after:left-[30rem] rtl:after:right-[30rem] after:w-[75rem] after:h-40 ltr:after:rotate-[115deg] rtl:after:rotate-[65deg] after:bg-amber-500/10 after:-z-1;
+}
+
+@media (min-width: 1024px) and (max-width: 1140px) {
+    .personal-wrapper {
+        @apply ltr:before:left-40 rtl:before:right-40 before:w-[75rem] before:h-[30rem] ltr:after:left-0 rtl:after:right-0  after:bottom-80 after:w-[75rem] after:h-60;
+    }
+}
+
+@media (max-width: 768px) {
+    .personal-wrapper {
+        @apply ltr:before:left-40 rtl:before:right-40 ltr:after:left-0 rtl:after:right-0 ;
+    }
+}
+
+@media (max-width: 767px) {
+    .personal-wrapper {
+        @apply ltr:before:left-0 rtl:before:right-0 ltr:after:-left-40 rtl:after:-right-40;
+    }
+}

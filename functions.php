@@ -51,6 +51,7 @@ add_filter('preprocess_comment', 'custom_preprocess_comment');
 
 
 require_once MP_THEME_DIRECTORY . "/inc/redux/main.php";
+require_once MP_THEME_DIRECTORY . "/inc/api/utils.php";
 
 if ( ! function_exists( 'mp_config' ) ) {
     function mp_config( $id, $fallback = false) {
@@ -58,3 +59,31 @@ if ( ! function_exists( 'mp_config' ) ) {
         return Redux::getOption('mp_config', $id, $fallback);
     }
 }
+
+// Add custom meta box for "summary"
+function add_summary_meta_box() {
+    add_meta_box(
+        'summary-meta-box',
+        'Summary',
+        'display_summary_meta_box',
+        'post',  // 'post' for posts, 'page' for pages
+        'normal',
+        'default'
+    );
+}
+add_action('add_meta_boxes', 'add_summary_meta_box');
+
+function display_summary_meta_box($post) {
+    $summary = get_post_meta($post->ID, 'summary', true);
+    ?>
+    <textarea name="summary" id="summary" rows="4" style="width: 100%;"><?php echo esc_textarea($summary); ?></textarea>
+    <?php
+}
+
+function save_summary_meta_data($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (isset($_POST['summary'])) {
+        update_post_meta($post_id, 'summary', sanitize_text_field($_POST['summary']));
+    }
+}
+add_action('save_post', 'save_summary_meta_data');

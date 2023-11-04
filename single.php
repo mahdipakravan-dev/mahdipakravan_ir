@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$comments = get_comments(array(
+    'post_id' => get_the_ID(),
+    'status' => 'approve',
+));
+?>
 
 <body class="font-shabnam text-base text-black dark:text-white dark:bg-slate-900">
 
@@ -19,7 +25,12 @@ get_template_part("inc/partials/navbar");
             <div class="mt-6">
                 <div class="mb-6 p-2">
                     <div class="bg-slate-900 rounded-md border border-dashed border-slate-200 p-4 font-xs">
-                        یک توضیح کوتاه و خوشگل از این صفحه
+                        <?php
+                        $summary = get_post_meta(get_the_ID(), 'summary', true);
+                        if (!empty($summary)) {
+                            echo '<div class="summary">' . wpautop($summary) . '</div>';
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php the_content(); ?>
@@ -49,14 +60,9 @@ get_template_part("inc/partials/navbar");
                             </form>
                         </div>
 
-                        <h2 class="text-xl font-semibold mt-6">نظرات ارزشمند شما :</h2>
+                        <h2 class="text-xl font-semibold mt-6">نظرات شما : (<?php echo count($comments) ?>)</h2>
                         <div class="space-y-4 mt-4">
                             <?php
-                            $comments = get_comments(array(
-                                'post_id' => get_the_ID(),
-                                'status' => 'approve',
-                            ));
-
                             foreach ($comments as $comment) :
                                 ?>
                                 <div class="p-4 rounded-lg shadow-md">

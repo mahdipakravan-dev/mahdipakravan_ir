@@ -54,6 +54,14 @@ const paths = {
             dir: './src',
             files: './src/**/*'
         },
+        theme: {
+            dir: './',
+            files: './*.php'
+        },
+        partials: {
+            dir: './inc/partials',
+            files: './inc/partials/*.php'
+        },
         css: {
             dir: './src/assets/css',
             files: './src/assets/css/**/*'
@@ -88,7 +96,7 @@ const paths = {
 gulp.task('browsersync', function (callback) {
     browsersync.init({
         server: {
-            baseDir: [paths.dist.base.dir, paths.src.base.dir, paths.base.base.dir]
+            baseDir: [paths.dist.base.dir, paths.src.base.dir,paths.src.theme.dir,paths.src.partials.dir, paths.base.base.dir]
         },
     });
     callback();
@@ -202,6 +210,8 @@ gulp.task('copy:all', function () {
     return gulp
         .src([
             paths.src.base.files,
+            paths.src.theme.files,
+            paths.src.partials.files,
             '!' + paths.src.partials.dir, '!' + paths.src.partials.files,
             '!' + paths.src.scss.dir, '!' + paths.src.scss.files,
             '!' + paths.src.js.dir, '!' + paths.src.js.files, '!' + paths.src.js.main,

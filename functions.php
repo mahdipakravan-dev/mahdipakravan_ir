@@ -5,7 +5,7 @@ define( 'MP_FRAMEWORK_DIRECTORY', plugin_dir_url(__FILE__) . '/inc' );
 function enable_page_categories() {
     register_taxonomy_for_object_type('category', 'page');
 }
-add_theme_support('post-thumbnails', array('page','post'));
+add_theme_support('post-thumbnails', array('page','post' , 'portfolio'));
 function disable_post_thumbnail_srcset($sources) {
     return false;
 }
@@ -87,3 +87,29 @@ function save_summary_meta_data($post_id) {
     }
 }
 add_action('save_post', 'save_summary_meta_data');
+
+function create_portfolio_post_type() {
+    $labels = array(
+        'name' => 'Portfolio',
+        'singular_name' => 'Portfolio',
+        'menu_name' => 'Portfolio',
+        'add_new' => 'Add New',
+        'add_new_item' => 'Add New Portfolio Item',
+        'edit_item' => 'Edit Portfolio Item',
+        'new_item' => 'New Portfolio Item',
+        'view_item' => 'View Portfolio Item',
+        'search_items' => 'Search Portfolio Items',
+        'not_found' => 'No Portfolio Items found',
+        'not_found_in_trash' => 'No Portfolio Items found in Trash',
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-images-alt2', // You can choose an icon from Dashicons or your own custom icon.
+        'rewrite' => array('slug' => 'portfolio'), // Change the slug as needed.
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    );
+    register_post_type('portfolio', $args);
+}
+add_action('init', 'create_portfolio_post_type');

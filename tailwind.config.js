@@ -2,7 +2,12 @@ const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
+    content: [
+        "./src/**/*.{html,js}",
+        "./*.{php}",
+        "./inc/partials/*.{php}",
+        "./node_modules/tw-elements/dist/js/**/*.js"
+    ],
     darkMode: 'class',
     important: true,
     theme: {

@@ -1,0 +1,163 @@
+@@include("partials/main.html")
+<head>
+    @@include("partials/title-meta.html", {"title": "MahdiPakravan"})
+
+    <!-- Css -->
+    @@include("partials/head-css.html")
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+</head>
+
+@@include("partials/body.html")
+
+@@include("partials/navbar/nav-left-white.html")
+<section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="service">
+    <div class="container">
+        <h1 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold"><?php the_title() ?></h1>
+
+        <main id="main" class="site-main">
+            <article class="w-full shadow-md flex flex-col md:flex-row justify-between space-x-2 p-4">
+                <div class="md:w-[60%]">
+                    <h1 class="text-2xl font-bold pb-10">پروژه وبسایت تواناشو</h1>
+
+                    <div class="bg-slate-900 p-2 rounded mb-4">
+                        <h3 class="text-md mb-2 flex justify-start items-center">
+                            <i data-feather="watch" class="h-5 w-5 ml-2"></i>
+                            تاریخ
+                        </h3>
+
+                        <p class="text-sm">1399-01-10 شروع</p>
+                        <p class="text-sm">1400-01-10 پایان</p>
+                    </div>
+                    <div class="bg-slate-900 p-2 rounded mb-4">
+                        <h3 class="text-md mb-2 flex justify-start items-center">
+                            <i data-feather="user" class="h-5 w-5 ml-2"></i>
+                            کارفرما
+                        </h3>
+
+                        <p class="text-sm">شرکت تواناشو به مدیریت علیرضا احدی</p>
+                    </div>
+
+                    <div class="bg-slate-900 p-2 rounded mb-4 shadow-md">
+                        <h3 class="text-md mb-2 flex justify-start items-center">
+                            <i data-feather="monitor" class="h-5 w-5 ml-2"></i>
+                            استک های استفاده شده
+                        </h3>
+
+                        <div class="grid grid-cols-4 gap-1">
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                            <div class="border bg-slate-500 rounded p-1 ml-1">Reactjs</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 p-2 rounded mb-4">
+                        <h3 class="text-md mb-2 flex justify-start items-center">
+                            <i data-feather="globe" class="h-5 w-5 ml-2"></i>
+                            آدرس وبسایت
+                        </h3>
+
+                        <p class="text-sm">
+                            <a href="#">mahdipakravan.ir</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full justify-center items-cente">
+                    <div class="swiper">
+                        <h4 class="mb-2">تصاویری از پروژه</h4>
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="https://arzonline.info/wp-content/uploads/2023/08/14020509000906_Test_PhotoN-504x375.jpg"
+                                     alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://arzonline.info/wp-content/uploads/2023/08/14020509000906_Test_PhotoN-504x375.jpg"
+                                     alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://arzonline.info/wp-content/uploads/2023/08/14020509000906_Test_PhotoN-504x375.jpg"
+                                     alt="">
+                            </div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <!--                        <img width="100%" height="100%" src="https://impactconsultingng.com/wp-content/uploads/2019/05/projectmanagement-691x691.jpeg?189db0&189db0" alt="">-->
+                </div>
+            </article>
+            <?php endwhile; ?>
+        </main>
+    </div>
+</section>
+
+@@include("partials/footer/footer.html")
+
+<a href="#" onclick="topFunction()" id="back-to-top"
+   class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-amber-500 text-white leading-9"><i
+        class="uil uil-arrow-up"></i></a>
+
+@@include("partials/switcher.html")
+
+<script src="assets/libs/feather-icons/feather.min.js"></script>
+@@include("partials/script-file.html")
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    window.renderGrid("post_container", window.posts);
+    window.renderGrid("booklets_container", window.booklets);
+</script>
+<style>
+    .swiper {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+    }
+    @media screen and (min-width: 600px) {
+        .swiper {
+            width: 500px;
+            height: 400px;
+            margin-top: 10%;
+        }
+    }
+</style>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
+</body>
+</html>

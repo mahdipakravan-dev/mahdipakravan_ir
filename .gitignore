@@ -1,1 +1,4 @@
 node_modules
+dist
+
+CREATE USER 'dbmanager'@'localhost' IDENTIFIED BY 'password';

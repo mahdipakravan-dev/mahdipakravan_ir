@@ -1,0 +1,50 @@
+@@include("partials/main.html")
+<head>
+    @@include("partials/title-meta.html", {"title": "MahdiPakravan"})
+
+    <!-- Css -->
+    @@include("partials/head-css.html")
+</head>
+
+@@include("partials/body.html")
+
+    @@include("partials/navbar/nav-left-white.html")
+
+<section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="service">
+    <div class="" style="padding: 0 20% 0 20%;">
+        <h1 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold"><?php the_title() ?></h1>
+
+        <div class="h-[70vh] rounded-md">
+            <div class="w-full flex justify-center items-center mr-4 text-sm mb-4 mb-8">
+                <?php the_post_thumbnail("full-thumbnail", array(
+                        'class' => 'rounded-md w-full',
+                )); ?>
+            </div>
+            <div class="mt-6">
+                <div class="mb-6 p-2 mr-2">
+                    <div class="bg-slate-900 rounded-md border border-dashed border-slate-200 p-4 font-xs mt-22">
+                        یک توضیح کوتاه و خوشگل از این صفحه
+                    </div>
+                </div>
+                <?php the_content(); ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@@include("partials/footer/footer.html")
+
+<a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-amber-500 text-white leading-9"><i class="uil uil-arrow-up ml-2"></i></a>
+
+@@include("partials/switcher.html")
+
+<script src="assets/libs/feather-icons/feather.min.js"></script>
+@@include("partials/script-file.html")
+
+<script>
+    window.renderGrid("post_container" , window.posts);
+    window.renderGrid("booklets_container" , window.booklets);
+</script>
+</body>
+</html>

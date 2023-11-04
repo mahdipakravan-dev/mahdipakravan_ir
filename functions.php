@@ -6,6 +6,14 @@ function enable_page_categories() {
     register_taxonomy_for_object_type('category', 'page');
 }
 add_theme_support('post-thumbnails', array('page','post'));
+function disable_post_thumbnail_srcset($sources) {
+    return false;
+}
+add_filter('wp_calculate_image_srcset', 'disable_post_thumbnail_srcset');
+function custom_image_sizes() {
+    add_image_size('full-thumbnail', 800, 800, true); // Change 300 and 200 to your desired width and height
+}
+add_action('after_setup_theme', 'custom_image_sizes');
 
 add_action('init', 'enable_page_categories');
 function enqueue_custom_styles() {
@@ -29,6 +37,18 @@ function enqueue_custom_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+function custom_preprocess_comment($commentdata) {
+    if ( isset( $_POST['author'] ) && ! empty( $_POST['author'] ) ) {
+        $commentdata['comment_author'] = wp_filter_nohtml_kses( $_POST['author'] );
+    }
+    if ( isset( $_POST['email'] ) && ! empty( $_POST['email'] ) ) {
+        $commentdata['comment_author_email'] = sanitize_email( $_POST['email'] );
+    }
+    return $commentdata;
+}
+add_filter('preprocess_comment', 'custom_preprocess_comment');
+
 
 require_once MP_THEME_DIRECTORY . "/inc/redux/main.php";
 

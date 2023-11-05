@@ -5,11 +5,6 @@ $comments = get_comments(array(
     'status' => 'approve',
 ));
 ?>
-<link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
 <body class="font-shabnam text-base text-black dark:text-white dark:bg-slate-900">
 
 <?php
@@ -51,10 +46,10 @@ get_template_part("inc/partials/navbar");
 
                         <p class="text-sm">
                             <?php
-                                $summary = get_post_meta(get_the_ID(), 'master', true);
-                                if (!empty($summary)) {
-                                    echo wpautop($summary);
-                                }
+                            $summary = get_post_meta(get_the_ID(), 'master', true);
+                            if (!empty($summary)) {
+                                echo wpautop($summary);
+                            }
                             ?>
                         </p>
                     </div>
@@ -67,10 +62,10 @@ get_template_part("inc/partials/navbar");
 
                         <div class="grid grid-cols-4 gap-1">
                             <?php
-                                $stacks = get_post_meta(get_the_ID(), 'stacks', true);
-                                $array = explode(',', $stacks);
-                                foreach ($array as $stack) {
-                            ?>
+                            $stacks = get_post_meta(get_the_ID(), 'stacks', true);
+                            $array = explode(',', $stacks);
+                            foreach ($array as $stack) {
+                                ?>
                                 <div class="border bg-slate-500 rounded p-1 ml-1 flex justify-center"><?php echo $stack?></div>
                             <?php } ?>
                         </div>
@@ -92,79 +87,13 @@ get_template_part("inc/partials/navbar");
                         </p>
                     </div>
                 </div>
-                <div class="w-full h-full justify-center items-center ">
-                    <div class="swiper">
-                        <h4 class="mb-2">تصاویری از پروژه</h4>
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <img src="https://arzonline.info/wp-content/uploads/2023/08/14020509000906_Test_PhotoN-504x375.jpg"
-                                     alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://arzonline.info/wp-content/uploads/2023/08/14020509000906_Test_PhotoN-504x375.jpg"
-                                     alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://arzonline.info/wp-content/uploads/2023/08/14020509000906_Test_PhotoN-504x375.jpg"
-                                     alt="">
-                            </div>
-                            ...
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <!--                        <img width="100%" height="100%" src="https://impactconsultingng.com/wp-content/uploads/2019/05/projectmanagement-691x691.jpeg?189db0&189db0" alt="">-->
+                <div class="w-full justify-center items-center p-2" style="height: 500px">
+                    <iframe src="https://tavanasho.com" frameborder="0" height="100%" width="100%" class="rounded-md"></iframe>
                 </div>
             </article>
         </main>
     </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<style>
-    .swiper {
-        width: 100%;
-        height: 300px;
-        border-radius: 10px;
-    }
-    @media screen and (min-width: 600px) {
-        .swiper {
-            width: 500px;
-            height: 400px;
-            margin-top: 10%;
-        }
-    }
-</style>
-<script type="module">
-    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-    });
-</script>
 <?php get_footer(); ?>
 
 </body>

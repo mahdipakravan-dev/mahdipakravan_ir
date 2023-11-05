@@ -55,3 +55,25 @@ function render_custom_posts($args) {
         echo 'No posts found.';
     endif;
 }
+
+
+function display_comments($comments, $parent_id = 0)
+{
+    foreach ($comments as $comment) {
+        if ($comment->comment_parent == $parent_id) {
+            echo '<div class="p-4 rounded-lg shadow-md">';
+            echo '<div class="flex items-center">';
+            echo '<div class="rounded-md">';
+            echo get_avatar($comment, 48);
+            echo '</div>';
+            echo '<div class="mr-4 mb-8">';
+            echo '<h3 class="text-lg font-semibold">' . $comment->comment_author . '</h3>';
+            echo '<p class="text-gray-600 text-sm">نوشته شده در : ' . get_comment_date('F j, Y', $comment) . '</p>';
+            echo '</div>';
+            echo '</div>';
+            echo '<p class="mt-4">' . $comment->comment_content . '</p>';
+            display_comments($comments, $comment->comment_ID); // Recursively display nested comments
+            echo '</div>';
+        }
+    }
+}

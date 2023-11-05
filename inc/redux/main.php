@@ -212,3 +212,11 @@ Redux::set_field(
         ),
     )
 );
+
+Redux::set_field( $opt_name, "basic", array(
+    'id' => "cvfile",
+    'type' => 'text',
+    'data' => array(
+        'Cv File'
+    )
+) );

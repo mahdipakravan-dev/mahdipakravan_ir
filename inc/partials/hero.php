@@ -1,5 +1,6 @@
 <?php
-    $hero_url = mp_config("opt-media")["url"]
+    $hero_url = mp_config("opt-media")["url"];
+    $cv_url = mp_config("cvfile")[0];
 ?>
 
 <!-- Start Hero -->
@@ -14,7 +15,7 @@
                 </p>
 
                 <div class="mt-6">
-                    <a href="#" class="btn bg-amber-500/10 hover:bg-amber-500 border-amber-500/10 hover:border-amber-500 text-amber-500 hover:text-white rounded-md ms-1">دانلود رزومه</a>
+                    <a href="<?php echo esc_url($cv_url) ?>" class="btn bg-amber-500/10 hover:bg-amber-500 border-amber-500/10 hover:border-amber-500 text-amber-500 hover:text-white rounded-md ms-1">دانلود رزومه</a>
                 </div>
             </div>
 

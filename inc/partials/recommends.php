@@ -28,8 +28,8 @@
                         </div>
 
                         <div class="text-center mt-5">
-                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/majid-jafari.jpg'); ?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="">
-                            <a href="" class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">مجید جعفری</a>
+                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/majid-jafari.jpg'); ?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="مجید جعفری">
+                            <p class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">مجید جعفری</p>
                             <span class="text-slate-400 text-sm block">مهندس نرم افزار در صربستان</span>
                         </div>
                     </div>
@@ -57,8 +57,8 @@
                         </div>
 
                         <div class="text-center mt-5">
-                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/abdolmaleki.jpg')?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="">
-                            <a href="" class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">علیرضا عبدالملکی</a>
+                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/abdolmaleki.jpg')?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="علیرضا عبدالملکی">
+                            <p class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">علیرضا عبدالملکی</p>
                             <span class="text-slate-400 text-sm block" dir="rtl">سرپرست تیم وب SnapTrip</span>
                         </div>
                     </div>
@@ -84,8 +84,8 @@
                         </div>
 
                         <div class="text-center mt-5">
-                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/alipanah.jpg'); ?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="">
-                            <a href="" class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">محمدعلی علی پناه</a>
+                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/alipanah.jpg'); ?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="محمد علی علی پناه">
+                            <p class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">محمدعلی علی پناه</p>
                             <span class="text-slate-400 text-sm block">سرپرست تیم وب زومیت</span>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
                         </div>
 
                         <div class="text-center mt-5">
-                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/yashar.jpg')?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="">
-                            <a href="" class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">یاشار زنگباری</a>
+                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/yashar.jpg')?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="یاشار زنگباری">
+                            <p class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">یاشار زنگباری</p>
                             <span class="text-slate-400 text-sm block" dir="rtl">برنامه نویس ارشد SnapFood</span>
                         </div>
                     </div>
@@ -138,8 +138,8 @@
                         </div>
 
                         <div class="text-center mt-5">
-                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/masood.jpg')?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="">
-                            <a href="" class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">مسعود شاهپوری</a>
+                            <img src="<?php echo site_url('/wp-content/uploads/2023/11/masood.jpg')?>" class="h-14 w-14 rounded-full shadow-md mx-auto mb-1" alt="مسعود شاهپوری">
+                            <p class="text-base font-medium h5 hover:text-amber-500 duration-500 ease-in-out">مسعود شاهپوری</p>
                             <span class="text-slate-400 text-sm block">برنامه نویس ارشد در آیگپ - مدرس مجتمع فنی تهران</span>
                         </div>
                     </div>

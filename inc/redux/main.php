@@ -213,6 +213,38 @@ Redux::set_field(
     )
 );
 
+Redux::set_field(
+    $opt_name,
+    "basic",
+    array(
+        'id'       => 'logo-dark',
+        'type'     => 'media',
+        'url'      => true,
+        'title'    => esc_html__('Logo (DARK)', 'mp-config'),
+        'desc'     => esc_html__('', 'mp-config'),
+        'subtitle' => esc_html__('', 'mp-config'),
+        'default'  => array(
+            'url'=>'https://s.wordpress.org/style/images/codeispoetry.png'
+        ),
+    )
+);
+
+Redux::set_field(
+    $opt_name,
+    "basic",
+    array(
+        'id'       => 'logo-light',
+        'type'     => 'media',
+        'url'      => true,
+        'title'    => esc_html__('Logo (LIGHT)', 'mp-config'),
+        'desc'     => esc_html__('', 'mp-config'),
+        'subtitle' => esc_html__('', 'mp-config'),
+        'default'  => array(
+            'url'=>'https://s.wordpress.org/style/images/codeispoetry.png'
+        ),
+    )
+);
+
 Redux::set_field( $opt_name, "basic", array(
     'id' => "cvfile",
     'type' => 'text',

@@ -12,7 +12,7 @@ $hero_url = mp_config("reserve-media")["url"]
             <p class="text-white/80 max-w-xl mx-auto text-[15px]">با کلیک رو دکمه زیر در همین لحظه میتونیم با هم در ارتباط باشیم و پروژه/منتورینگ/مشاوره شما رو شروع کنیم</p>
 
             <div class="relative mt-8">
-                <a href="" class="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">رزرو جلسه</a>
+                <a href="<?php echo esc_url(get_home_url())?>/#contact" class="btn bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 text-white rounded-md">رزرو جلسه</a>
             </div>
         </div><!--end grid-->
     </div><!--end container-->

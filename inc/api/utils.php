@@ -18,7 +18,10 @@ function render_custom_posts($args) {
             <div class="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800">
                 <?php
                 add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
-                the_post_thumbnail();
+                the_post_thumbnail("post-thumbnail" , array(
+                        "alt" => get_the_title(""),
+                        "title" => get_the_title(""),
+                ));
                 remove_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
                 ?>
                 <div class="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-b to-slate-900 from-transparent transition-all duration-500"></div>

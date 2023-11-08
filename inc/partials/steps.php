@@ -1,5 +1,5 @@
 <?php
-    $intro_image_url = mp_config("intro-media")["url"]
+$intro_image_url = mp_config("intro-media")["url"]
 ?>
 
 <!-- Start -->
@@ -17,12 +17,8 @@
                 <i data-feather="airplay" class="h-10 w-10 stroke-1 text-amber-500"></i>
 
                 <div class="content mt-7">
-                    <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">یک جلسه آنلاین</a>
+                    <h3 class="title h5 text-[17px] font-medium hover:text-amber-500">یک جلسه آنلاین</h3>
                     <p class="text-slate-400 mt-3 text-[15px]">در اولین قدم یک جلسه آنلاین میزاریم و من با پروژه شما آشنا میشم اگر هم لازم باشه میتونیم تو یک کافی شاپ باهم جلسه حضوری بزاریم</p>
-
-                    <div class="mt-5">
-                        <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">بیشتر بخوانید <i class="uil uil-arrow-left"></i></a>
-                    </div>
                 </div>
             </div>
             <!-- Content -->
@@ -32,12 +28,8 @@
                 <i data-feather="aperture" class="h-10 w-10 stroke-1 text-amber-500"></i>
 
                 <div class="content mt-7">
-                    <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">طراحی WireFrame و Blue Print</a>
+                    <h3 class="title h5 text-[17px] font-medium hover:text-amber-500">طراحی WireFrame و Blue Print</h3>
                     <p class="text-slate-400 mt-3 text-[15px]">تمام مراحل بیزینسی پروژه شما و یک شمای کلی از وبسایت رو طراحی میکنم و باهم بررسی مجدد میکنیم و نهایی میکنیم و وارد پیاده سازی وبسایت میشیم .</p>
-
-                    <div class="mt-5">
-                        <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">بیشتر بخوانید <i class="uil uil-arrow-left"></i></a>
-                    </div>
                 </div>
             </div>
             <!-- Content -->
@@ -47,12 +39,8 @@
                 <i data-feather="camera" class="h-10 w-10 stroke-1 text-amber-500"></i>
 
                 <div class="content mt-7">
-                    <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">انتخاب Stack</a>
+                    <h6 class="title h5 text-[17px] font-medium hover:text-amber-500">انتخاب Stack</h6>
                     <p class="text-slate-400 mt-3 text-[15px]">تو این مرحله با توجه به پروژه شما انتخاب میکنم که بهترین زبان برنامه نویسی و ابزار ها برای پروژه شما چیست .</p>
-
-                    <div class="mt-5">
-                        <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">بیشتر بخوانید <i class="uil uil-arrow-left"></i></a>
-                    </div>
                 </div>
             </div>
             <!-- Content -->
@@ -62,12 +50,8 @@
                 <i data-feather="compass" class="h-10 w-10 stroke-1 text-amber-500"></i>
 
                 <div class="content mt-7">
-                    <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">شروع فاز اول پروژه</a>
+                    <h6 class="title h5 text-[17px] font-medium hover:text-amber-500">شروع فاز اول پروژه</h6>
                     <p class="text-slate-400 mt-3 text-[15px]">پروژه شما معمولا به 3 الی 5 فاز تقسیم بندی میشن و هزینه های پیاده سازی وبسایت شما نیز بعد از تحویل هر فاز میباشد و فاز آخر که به اتمام برسد وارد فاز تغییرات و دیباگ میشیم .</p>
-
-                    <div class="mt-5">
-                        <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">بیشتر بخوانید <i class="uil uil-arrow-left"></i></a>
-                    </div>
                 </div>
             </div>
             <!-- Content -->
@@ -77,12 +61,8 @@
                 <i data-feather="settings" class="h-10 w-10 stroke-1 text-amber-500"></i>
 
                 <div class="content mt-7">
-                    <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">امنیت</a>
+                    <h6 class="title h5 text-[17px] font-medium hover:text-amber-500">امنیت</h6>
                     <p class="text-slate-400 mt-3 text-[15px]">امن سازی پروژه شما از امن سازی شبکه شروع میشه و به مرور وارد فاز های وب و جلوگیری از حملات مختلف پرداخته میشود و هر ماه میتونیم بررسی امنیتی رو تمدید کنیم .</p>
-
-                    <div class="mt-5">
-                        <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">بیشتر بخوانید <i class="uil uil-arrow-left"></i></a>
-                    </div>
                 </div>
             </div>
             <!-- Content -->
@@ -92,12 +72,8 @@
                 <i data-feather="watch" class="h-10 w-10 stroke-1 text-amber-500"></i>
 
                 <div class="content mt-7">
-                    <a href="" class="title h5 text-[17px] font-medium hover:text-amber-500">پروژه شما همیشه باید بروز بمونه</a>
+                    <h6 class="title h5 text-[17px] font-medium hover:text-amber-500">پروژه شما همیشه باید بروز بمونه</h6>
                     <p class="text-slate-400 mt-3 text-[15px]">جهت جلوگیری از منسوخ شده پروژه تان یک پیشنهاد خوب دارم , من میتونم در دوره های ماهانه پروژه شما رو بررسی کنم و همیشه اون رو بروز نگه دارم</p>
-
-                    <div class="mt-5">
-                        <a href="" class="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500">بیشتر بخوانید <i class="uil uil-arrow-left"></i></a>
-                    </div>
                 </div>
             </div>
             <!-- Content -->

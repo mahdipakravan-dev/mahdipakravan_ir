@@ -9,7 +9,9 @@
     <div class="container">
         <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
             <div>
-                <h4 class="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4">سلام, من مهدی پاکروان هستم !<br><span class="typewrite text-amber-500" data-period="2000" data-type='[ "مهندس نرم افزار", "طراح وب", "محقق هوش مصنوعی و ML" ]'> <span class="wrap"></span> </span></h4>
+                <h1 class="font-bold lg:text-[40px] text-3xl lg:leading-normal leading-normal mb-4">سلام, من مهدی پاکروان هستم !
+                    <br><span class="typewrite text-amber-500" data-period="2000" data-type='[ "مهندس نرم افزار", "طراح وب", "محقق هوش مصنوعی و ML" ]'> <span class="wrap"></span>
+                </span></h1>
                 <p class="text-slate-400 max-w-xl">
                     متخصص در توسعه وب و مهندسی نرم‌افزار با تجربه و علاقه به هوش مصنوعی و وب 3 هستم. هدف من ادغام این تخصص‌ها برای ایجاد راهکارهای نوآورانه در زمینه‌های مختلف است.
                 </p>
@@ -20,11 +22,11 @@
             </div>
 
             <div class="relative">
-                <img src="<?php echo esc_url($hero_url); ?>" alt="">
+                <img src="<?php echo esc_url($hero_url); ?>" alt="مهندس نرم افزار - طراحی وب - آموزش مهندسی نرم افزار - طراح وب" title="مهدی پاکروان">
 
                 <div class="absolute lg:top-80 md:top-56 top-48 ltr:md:-right-0 ltr:right-2 rtl:md:-left-0 rtl:left-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
-                    <h6 class="font-semibold">طراح وب</h6>
-                    <h6 class="text-sm text-slate-400 mt-1">+5 سال تجربه</h6>
+                    <h2 class="font-semibold">طراح وب</h2>
+                    <h3 class="text-sm text-slate-400 mt-1">+5 سال تجربه</h3>
                 </div>
             </div>
         </div>

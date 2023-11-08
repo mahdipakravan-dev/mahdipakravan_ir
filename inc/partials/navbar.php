@@ -1,9 +1,13 @@
+<?php
+    $logo_dark = mp_config("logo-dark")["url"];
+    $logo_light = mp_config("logo-light")["url"];
+?>
 <!-- Navbar Start -->
 <nav class="navbar" id="navbar">
     <div class="container flex flex-wrap items-center justify-between">
         <a class="navbar-brand md:me-8" href="index.html">
-            <img src="assets/images/logo-dark.png" class="inline-block dark:hidden" alt="">
-            <img src="assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
+            <img src="<?php echo esc_url($logo_dark)?>" class="inline-block dark:hidden" alt="لوگو سایت شخصی">
+            <img src="<?php echo esc_url($logo_dark)?>" class="hidden dark:inline-block" alt="سایت شخصی">
         </a>
 
         <div class="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
@@ -31,25 +35,25 @@
         <div class="navigation lg_992:order-1 lg_992:flex hidden me-auto" id="menu-collapse">
             <ul class="navbar-nav" id="navbar-navlist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://mahdipakravan.ir/#home">خانه</a>
+                    <a class="nav-link active" href="<?php echo esc_url(get_home_url())?>/#home">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mahdipakravan.ir/#about">معرفی</a>
+                    <a class="nav-link" href="<?php echo esc_url(get_home_url())?>/#about">معرفی</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mahdipakravan.ir/#service">مهارت ها</a>
+                    <a class="nav-link" href="<?php echo esc_url(get_home_url())?>/#service">مهارت ها</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mahdipakravan.ir/#experience">تجربیات</a>
+                    <a class="nav-link" href="<?php echo esc_url(get_home_url())?>/#experience">تجربیات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mahdipakravan.ir/#project">پروژه ها</a>
+                    <a class="nav-link" href="<?php echo esc_url(get_home_url())?>/#project">پروژه ها</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mahdipakravan.ir/#blog">مقالات</a>
+                    <a class="nav-link" href="<?php echo esc_url(get_home_url())?>/#blog">مقالات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://mahdipakravan.ir/#contact">ارتباط با من</a>
+                    <a class="nav-link" href="<?php echo esc_url(get_home_url())?>/#contact">ارتباط با من</a>
                 </li>
             </ul>
         </div>

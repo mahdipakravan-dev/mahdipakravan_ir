@@ -63,9 +63,15 @@ function display_comments($comments, $parent_id = 0)
         if ($comment->comment_parent == $parent_id) {
             echo '<div class="p-4 rounded-lg shadow-md">';
             echo '<div class="flex items-center">';
-            echo '<div class="rounded-md">';
-            echo get_avatar($comment, 48);
+
+            // Generate a random color for the circle
+            $random_color = '#' . substr(md5($comment->comment_author), 0, 6);
+
+            // Display the rounded circle with random color
+            echo '<div class="rounded-full w-12 h-12 text-white text-center flex items-center justify-center" style="background-color: ' . $random_color . ';">';
+            echo strtoupper(substr($comment->comment_author, 0, 1)); // Display the first letter of the author's name
             echo '</div>';
+
             echo '<div class="mr-4 mb-8">';
             echo '<h3 class="text-lg font-semibold">' . $comment->comment_author . '</h3>';
             echo '<p class="text-gray-600 text-sm">نوشته شده در : ' . get_comment_date('F j, Y', $comment) . '</p>';

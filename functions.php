@@ -34,6 +34,8 @@ function enqueue_custom_scripts() {
     wp_enqueue_script('tiny-slider', get_template_directory_uri() . '/dist/assets/libs/tiny-slider/min/tiny-slider.js', array(), null, true);
     wp_enqueue_script('plugins-init', get_template_directory_uri() . '/dist/assets/js/plugins.init.js', array(), null, true);
     wp_enqueue_script('app', get_template_directory_uri() . '/dist/assets/js/app.js', array(), null, true);
+    wp_enqueue_script('ajax-handler', get_template_directory_uri(__FILE__) . '/dist/assets/js/ajax-handler.js', array('jquery'), null, true);
+    wp_localize_script('ajax-handler', 'ajaxHandler', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
@@ -52,6 +54,7 @@ add_filter('preprocess_comment', 'custom_preprocess_comment');
 
 require_once MP_THEME_DIRECTORY . "/inc/redux/main.php";
 require_once MP_THEME_DIRECTORY . "/inc/api/utils.php";
+require_once MP_THEME_DIRECTORY . "/inc/api/ajax.php";
 
 if ( ! function_exists( 'mp_config' ) ) {
     function mp_config( $id, $fallback = false) {
@@ -67,6 +70,22 @@ function add_summary_meta_box() {
         'Summary',
         'display_summary_meta_box',
         'post',  // 'post' for posts, 'page' for pages
+        'normal',
+        'default'
+    );
+    add_meta_box(
+        'summary-meta-box',
+        'Summary',
+        'display_summary_meta_box',
+        'page',  // 'post' for posts, 'page' for pages
+        'normal',
+        'default'
+    );
+    add_meta_box(
+        'summary-meta-box',
+        'Summary',
+        'display_summary_meta_box',
+        'portfolio',  // 'post' for posts, 'page' for pages
         'normal',
         'default'
     );

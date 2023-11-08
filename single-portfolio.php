@@ -16,7 +16,7 @@ get_template_part("inc/partials/navbar");
         <main id="main" class="site-main">
             <article class="w-full shadow-md flex flex-col md:flex-row justify-between space-x-2 p-4">
                 <div class="md:w-[60%]">
-                    <h1 class="text-2xl font-bold pb-10">پروژه وبسایت تواناشو</h1>
+                    <h1 class="text-2xl font-bold pb-10"><?php the_title() ?></h1>
 
                     <div class="bg-slate-900 p-2 rounded mb-4">
                         <h3 class="text-md mb-2 flex justify-start items-center">
@@ -46,10 +46,10 @@ get_template_part("inc/partials/navbar");
 
                         <p class="text-sm">
                             <?php
-                            $summary = get_post_meta(get_the_ID(), 'master', true);
-                            if (!empty($summary)) {
-                                echo wpautop($summary);
-                            }
+                                $summary = get_post_meta(get_the_ID(), 'master', true);
+                                if (!empty($summary)) {
+                                    echo wpautop($summary);
+                                }
                             ?>
                         </p>
                     </div>
@@ -62,10 +62,10 @@ get_template_part("inc/partials/navbar");
 
                         <div class="grid grid-cols-4 gap-1">
                             <?php
-                            $stacks = get_post_meta(get_the_ID(), 'stacks', true);
-                            $array = explode(',', $stacks);
-                            foreach ($array as $stack) {
-                                ?>
+                                $stacks = get_post_meta(get_the_ID(), 'stacks', true);
+                                $array = explode(',', $stacks);
+                                foreach ($array as $stack) {
+                            ?>
                                 <div class="border bg-slate-500 rounded p-1 ml-1 flex justify-center"><?php echo $stack?></div>
                             <?php } ?>
                         </div>
@@ -81,14 +81,14 @@ get_template_part("inc/partials/navbar");
                             <?php
                             $address = get_post_meta(get_the_ID(), 'address', true);
                             if (!empty($address)) {
-                                echo "<a href='$address'>$address</a>";
-                            }
                             ?>
+                                <a href='<?php echo esc_url($address)?>'><?php echo esc_url($address)?></a>
+                            <?php } ?>
                         </p>
                     </div>
                 </div>
                 <div class="w-full justify-center items-center p-2" style="height: 500px">
-                    <iframe src="https://tavanasho.com" frameborder="0" height="100%" width="100%" class="rounded-md"></iframe>
+                    <iframe src="<?php echo esc_url($address)?>" frameborder="0" height="100%" width="100%" class="rounded-md"></iframe>
                 </div>
             </article>
         </main>

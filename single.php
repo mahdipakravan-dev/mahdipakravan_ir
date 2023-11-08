@@ -13,7 +13,7 @@ get_template_part("inc/partials/navbar");
 ?>
 
 <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="service">
-    <div class="" style="padding: 0 20% 0 20%;">
+    <div class="container-page">
         <h1 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold"><?php the_title() ?></h1>
 
         <div class="rounded-md">
@@ -63,21 +63,24 @@ get_template_part("inc/partials/navbar");
                         <h2 class="text-xl font-semibold mt-6">نظرات شما : (<?php echo count($comments) ?>)</h2>
                         <div class="space-y-4 mt-4">
                             <?php
-                            foreach ($comments as $comment) :
-                                ?>
-                                <div class="p-4 rounded-lg shadow-md">
-                                    <div class="flex items-center">
-                                        <div class="rounded-md">
-                                            <?php echo get_avatar($comment, 48); ?>
-                                        </div>
-                                        <div class="mr-4 mb-8">
-                                            <h3 class="text-lg font-semibold"><?php echo $comment->comment_author; ?></h3>
-                                            <p class="text-gray-600 text-sm">نوشته شده در : <?php echo get_comment_date('F j, Y', $comment); ?></p>
-                                        </div>
-                                    </div>
-                                    <p class="mt-4"><?php echo $comment->comment_content; ?></p>
-                                </div>
-                            <?php endforeach; ?>
+                            global $post; // Get the current post or page object
+
+                            $comments_args = array(
+                                'post_id' => $post->ID,
+                                'style' => 'ul',
+                                'type' => 'comment',
+                                'avatar_size' => 48,
+                                'per_page' => -1,
+                                'max_depth' => 5, // Specify the maximum depth for nested comments
+                            );
+
+                            $comments = get_comments($comments_args);
+
+                            echo '<ul class="comment-list">';
+                            display_comments($comments);
+                            echo '</ul>';
+
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -89,6 +92,18 @@ get_template_part("inc/partials/navbar");
 </section>
 
 
+<style>
+    @media screen and (max-width: 500px){
+        .container-page {
+            padding: 0 10% 0 10%;
+        }
+    }
+    @media screen and (min-width: 500px) {
+        .container-page {
+            padding: 0 20% 0 20%;
+        }
+    }
+</style>
 <?php get_footer(); ?>
 
 </body>

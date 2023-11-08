@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="lg:col-span-5 text-center mt-6 md:mt-0">
-                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script>  طراحی شده با <i class="mdi mdi-heart text-red-600"></i> توسط <a href="#" target="_blank" class="text-reset">خودم :)</a></p>
+                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script>  طراحی شده با <i class="mdi mdi-heart text-red-600"></i> توسط <a href="#" target="_blank" class="text-reset">خودم , در تایم های خالی بین کلاس های دانشگاه :)</a></p>
                 </div>
 
                 <ul class="lg:col-span-4 list-none md:text-end text-center mt-6 md:mt-0">

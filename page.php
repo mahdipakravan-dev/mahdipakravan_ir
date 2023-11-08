@@ -13,7 +13,7 @@ get_template_part("inc/partials/navbar");
 ?>
 
 <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="service">
-    <div class="" style="padding: 0 20% 0 20%;">
+    <div class="container-page">
         <h1 class="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold"><?php the_title() ?></h1>
 
         <div class="rounded-md">
@@ -92,6 +92,18 @@ get_template_part("inc/partials/navbar");
 </section>
 
 
+<style>
+    @media screen and (max-width: 500px){
+        .container-page {
+            padding: 0 10% 0 10%;
+        }
+    }
+    @media screen and (min-width: 500px) {
+        .container-page {
+            padding: 0 20% 0 20%;
+        }
+    }
+</style>
 <?php get_footer(); ?>
 
 </body>
